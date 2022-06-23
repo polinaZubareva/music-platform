@@ -9,7 +9,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const track_module_1 = require("./track/track.module");
-const mongoose_1 = require("@nestjs/mongoose");
 const file_module_1 = require("./file/file.module");
 const path = require("path");
 const serve_static_1 = require("@nestjs/serve-static");
@@ -19,11 +18,6 @@ AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
             serve_static_1.ServeStaticModule.forRoot({ rootPath: path.resolve(__dirname, 'static') }),
-            mongoose_1.MongooseModule.forRootAsync({
-                useFactory: () => ({
-                    uri: "mongodb://localhost:27017/test",
-                }),
-            }),
             track_module_1.TrackModule,
             file_module_1.FileModule
         ]

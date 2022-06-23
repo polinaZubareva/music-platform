@@ -8,7 +8,7 @@ const start = async () => {
         const PORT = process.env.PORT || 5000;
         const app = await NestFactory.create(AppModule);
         app.enableCors();
-        mongoose.connect("localhost:27017")
+        mongoose.connect("mongodb://localhost:27017")
             .then(await app.listen(PORT, () => console.log(`server started on PORT ${PORT}`))            )
 
     } catch (e) {
