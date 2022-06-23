@@ -1,17 +1,19 @@
+import { Component } from 'react';
 import MainLayout from '../layouts/main-layout';
 
-const Index = () => {
-  return (
-    <>
-      <MainLayout>
-        <div className='center'>
-          <h1>Добро пожаловать!</h1>
-          <h3>Здесь собраны лучшие треки!</h3>
-        </div>
-      </MainLayout>
+class Index extends Component {
+  render() {
+    return (
+      <>
+        <MainLayout>
+          <div className='center'>
+            <h1>Добро пожаловать!</h1>
+            <h3>Здесь собраны лучшие треки!</h3>
+          </div>
+        </MainLayout>
 
-      <style jsx>
-        {`
+        <style jsx>
+          {`
                   .center {
                       margin-top: 150px;
                       display: flex;
@@ -19,9 +21,10 @@ const Index = () => {
                       align-items: center;
                       justify-content: center;
               `}
-      </style>
-    </>
-  );
-};
+        </style>
+      </>
+    );
+  }
+}
 
 export default Index;
