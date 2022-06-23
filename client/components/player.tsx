@@ -3,8 +3,8 @@ import { Pause, PlayArrow, VolumeUp } from '@mui/icons-material';
 import { Grid, IconButton } from '@mui/material';
 import styles from '../styles/player.module.scss';
 import TrackProgress from './track-progress';
-import { useActions } from '../hooks/use-actions';
 import { useTypedSelector } from '../hooks/use-typed-selector';
+import { useActions } from '../hooks/use-actions';
 
 let audio;
 
