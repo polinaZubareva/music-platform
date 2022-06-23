@@ -1,24 +1,27 @@
-function Index() {
+import MainLayout from '../layouts/main-layout';
+
+const Index = () => {
   return (
     <>
-      <div className="center">
-        <h1>Добро пожаловать</h1>
-        <h3>Здесь собраны лучшие треки</h3>
-      </div>
+      <MainLayout>
+        <div className='center'>
+          <h1>Добро пожаловать!</h1>
+          <h3>Здесь собраны лучшие треки!</h3>
+        </div>
+      </MainLayout>
 
       <style jsx>
         {`
-          .center {
-            margin-top: 150px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-          }
-        `}
+                  .center {
+                      margin-top: 150px;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: center;
+              `}
       </style>
     </>
   );
-}
+};
 
 export default Index;
